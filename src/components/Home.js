@@ -29,7 +29,7 @@ const Home = () => {
     return (
         <BrowserRouter>
             <NavBar />
-            <main className='overflow-hidden'>
+            <main style={{"overflow":"hidden"}} className='overflow-hidden'>
                 <Hero />
                 <button type='button' onClick={()=> call()}>Call me api</button>
             </main>

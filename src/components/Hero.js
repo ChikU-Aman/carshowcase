@@ -9,8 +9,8 @@ const Hero = () => {
 
     }
   return (
-    <div>
-        <div className="flex-1 pt-36 padding-x">
+    <div style={{"display":"flex"}}>
+        <div style={{"flex":"1 1 0%"}} className="flex-1 pt-36 padding-x">
             <h1 className='hero__title'>
                 Find, book, or rent a car -- quickly
                 and easily!
@@ -28,7 +28,7 @@ const Hero = () => {
 
             <div className='hero__image-container'>
                 <div className='hero__image'>
-                    <Image fill className='object-contain' src={fortunerImage} alt="hero"/>
+                    <Image style={{"objectFit":"contain"}} fill className='object-contain' src={fortunerImage} alt="hero"/>
                 </div>
                 <div className='hero__image-overlay'/>
             </div>

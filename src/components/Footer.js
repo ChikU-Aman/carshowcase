@@ -22,8 +22,11 @@ const Footer = () => {
                     footerLinks.map((item) => {
                         //return 
                         return <div key={item.title} className='footer__link'>
-                            <h3 className='font-bold'>{item.title}</h3>
-                            <div className='flex flex-col gap-5'>
+                            <h3 style={{"fontWeight":"700"}} className='font-bold'>{item.title}</h3>
+                            <div style={{"display":"flex",
+                                        "flexDirection":"column",
+                                        "gap":"20px"}}  
+                             className='flex flex-col gap-5'>
                                 {
                                     item.links.map((link)=>{
                                         return <Link key={link.title}
