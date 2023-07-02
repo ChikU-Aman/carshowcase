@@ -5,7 +5,6 @@ import fortunerImage from '../assests/hero.png'
 import { Image } from 'react-bootstrap'
 
 const Hero = () => {
-    const arr = ["a","b","c"]
     const handleScroll = () =>{
 
     }
@@ -16,14 +15,6 @@ const Hero = () => {
                 Find, book, or rent a car -- quickly
                 and easily!
             </h1>
-            {
-                arr.map(()=>{
-                    return <p className='hero__subtitle'>
-                    Streamline your car rental experience
-                    with our effortless booking process.
-                </p>
-                })
-            }
             <p className='hero__subtitle'>
                 Streamline your car rental experience
                 with our effortless booking process.
@@ -38,8 +29,8 @@ const Hero = () => {
             <div className='hero__image-container'>
                 <div className='hero__image'>
                     <Image fill className='object-contain' src={fortunerImage} alt="hero"/>
-                    <div className='hero__image-overlay'/>
                 </div>
+                <div className='hero__image-overlay'/>
             </div>
         </div>
     </div>

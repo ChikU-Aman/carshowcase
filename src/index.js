@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Hero from './components/Hero';
+import { BrowserRouter } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <main className='overflow-hidden'>
-      <Hero/>
-    </main>
+    <div>
+      <Home/>
+    </div>
   </React.StrictMode>
 );
 
