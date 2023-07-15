@@ -1,0 +1,30 @@
+.header__container{
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.header__navbar{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: transparent;
+    @media (min-width:640px){
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+}
+
+.navbar__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
