@@ -12,7 +12,7 @@ const SearchManufacture = () => {
     const filteredManufacuturers = () => {
         return query === "" ? manufacturers :
             manufacturers.filter((item) => {
-                item.toLowerCase()
+                return item.toLowerCase()
                     .replace(/\s+/g, "")
                     .includes(query.toLowerCase().replace(/\s+/g, ""))
             })
@@ -35,6 +35,7 @@ const SearchManufacture = () => {
                         className='search-manufacturer__input'
                         displayValue={(item) => item.toString()}
                         placeholder='Volkswagen ...'
+                        onChange={(event) => setQuery(event.target.value)}
                     />
                     <Transition
                         as={Fragment}
@@ -45,23 +46,31 @@ const SearchManufacture = () => {
                     >
                         <Combobox.Options className='combo_box__options' static>
                             {
-                                filteredManufacuturers.length === 0 && query !== "" ? (
-                                    <Combobox.Option>
-                                        Create
+                                filteredManufacuturers().length === 0 && query !== "" ? 
+                                (
+                                    <Combobox.Option value={query}
+                                    className='combo_box__option'>
+                                        Create "{query}"
                                     </Combobox.Option>
                                 ) :
-                                    (
-                                        filteredManufacuturers.map((item) => {
-                                            return
-                                            <Combobox.Option
-                                                key={item}
-                                                value={item}
-                                                className=''
-                                            >
-                                                H1
-                                            </Combobox.Option>
-                                        })
-                                    )
+                                (
+                                 filteredManufacuturers().map((manu)=>{
+                                    return <Combobox.Option
+                                    className={({active}) => `combo_box__option ${active? 'active':'in_active'}`}
+                                    key={manu}
+                                    value={manu}>
+                                        { ({selected,active}) => (
+                                            <>
+                                                <span className={`options ${selected ? 'options_selected' : 'options_uselected'} `}>{manu}</span>
+                                                {selected ? (
+                                                    <span className={`selection__opt ${active ? 'selection__opt_active':'selection__opt_inactive'}`}></span>
+                                                ):null}
+                                            </>
+                                        )
+                                        }
+                                    </Combobox.Option>
+                                 })   
+                                )
                             }
                         </Combobox.Options>
 

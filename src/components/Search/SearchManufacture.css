@@ -3,7 +3,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
     @media not all and (min-width:640px) {
         width: 100%;
     }
@@ -48,6 +47,57 @@
     padding-bottom: 4px;
     font-size: 16px;
     line-height: 24px;
-    
+}
 
+.combo_box__option{
+    cursor: default;
+    user-select: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+    padding-right: 16px;
+}
+
+.active{
+    position: relative;
+    background-color: rgb(43,89,255,1);
+    color: rgb(255, 255, 255,1);
+}
+
+.in_active{
+    position: relative;
+    color: rgb(17,24,39,1);
+}
+
+.options{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.options_selected{
+    font-weight: 500;
+}
+
+.options_uselected{
+    font-weight: 400;
+}
+
+.selection__opt{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    
+}
+
+.selection__opt_active{
+    color: rgb(255,255,255,1);
+}
+.selection__opt_inactive{
+    color: #7e22ce;
 }
