@@ -66,8 +66,7 @@ const SearchManufacture = () => {
                                                     <span className={`selection__opt ${active ? 'selection__opt_active':'selection__opt_inactive'}`}></span>
                                                 ):null}
                                             </>
-                                        )
-                                        }
+                                        )}
                                     </Combobox.Option>
                                  })   
                                 )

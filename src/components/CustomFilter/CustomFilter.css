@@ -24,3 +24,57 @@
     --tw-shadow-colored: 0 0 4px 6px -1px  */
 
 }
+.custom-filter__options{
+    position: absolute;
+    margin-top: 4px;
+    max-height: 240px;
+    width: 100%;
+    overflow: auto;
+    border-radius: 6px;
+    background-color: rgb(255,255,255,1);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+
+    @media (min-width:640px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.custom-filter__option{
+    position: relative;
+    cursor: default;
+    user-select: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+.custom-filter__option_active{
+    background-color: rgb(43, 89,255,1);
+    color: rgb(255,255,255,1);
+}
+.custom-filter__option_inactive{
+    color: rgb(17,24,39,1);
+}
+
+.custom-filter_span{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-filter_span_selected{
+    font-weight: 500;
+}
+
+.custom-filter_span_unselected{
+    font-weight: 400;
+}
