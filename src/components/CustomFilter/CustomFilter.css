@@ -1,0 +1,26 @@
+.custom-filter__btn{
+    position: relative;
+    width: 100%;
+    min-width: 127px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    border-radius: 8px;
+    background-color: rgb(255,255,255,1);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: left;
+    border-width: 1px;
+    
+    @media (min-width:640px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    /* box-shadow: ;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) , 0 2px 4px -2px rgba(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 0 4px 6px -1px  */
+
+}
